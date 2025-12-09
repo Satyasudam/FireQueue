@@ -10,7 +10,7 @@ Includes modular rule matching, NAT and redirection support, and a CLI interface
 ---
 
 ## 📁 Project Structure
-
+``` bash
 📦 firewall-project/
 ├── include/                        # Header files
 │   ├── cli.h
@@ -43,7 +43,7 @@ Includes modular rule matching, NAT and redirection support, and a CLI interface
 ├── README.md                       # Project overview
 └── run_enforce.sh                  # Runs the enforcement mode
 |__ run_sim.sh                      # Runs only the simulation mode
-
+```
 
 
 ---
