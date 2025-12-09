@@ -50,19 +50,21 @@ sudo apt install libpcap-dev libnetfilter-queue-dev iptables iproute2
 
 🚀 Usage
 Run in Enforcement Mode (NFQUEUE-based)
-```sudo ./run_enforce.sh ```
-
+```bash
+sudo ./run_enforce.sh
+```
 
 This will load iptables/ip6tables rules and launch the firewall in active mode.
 
 Run in Simulation Mode (Sniffer)
-``` sudo ./run_simulate.sh ```
-
+```base
+sudo ./run_simulate.sh
+```
 
 This passively monitors traffic and matches rules without enforcing any verdicts.
 
 🧰 Rule Management CLI
-
+```bash
 ===== FIREWALL MENU ====:
 1. Add rule
 2. Show rules
@@ -72,9 +74,11 @@ This passively monitors traffic and matches rules without enforcing any verdicts
 6. Load rules
 7. Start simulation
 8. Exit
-
+```
+```bash
 Select mode:
 1. Simulation (pcap)
 2. Enforcement (NFQUEUE)
 3. Main menu
 0. Exit
+```
