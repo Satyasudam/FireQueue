@@ -11,16 +11,39 @@ Includes modular rule matching, NAT and redirection support, and a CLI interface
 
 ## 📁 Project Structure
 
-firewall-project/
-├── include/ # Header files
-├── src/ # Core logic: rule engine, NFQUEUE handling, parsing
-├── scripts/ # Setup & launcher scripts
-├── data/ # Persistent rule configs and logs (rules.conf,firewall.log)
-├── docs/ # Architecture, Netfilter internals, flow diagrams
-├── Makefile # Build file
-├── run_enforce.sh # Run enforcement mode
-├── run_simulate.sh # Run simulation (sniff) mode
-└── README.md
+📦 firewall-project/
+├── include/                        # Header files
+│   ├── cli.h
+│   ├── fw_core.h
+│   ├── logger.h
+│   ├── nfqueue_handler.h
+│   ├── packet_parser.h
+│   ├── rules.h
+│   ├── config.h
+│   └── stats.h
+│
+├── src/                            # Source code
+│   ├── cli.c
+│   ├── fw_core.c
+│   ├── logger.c
+│   ├── main.c                      # Entry point
+│   ├── nfqueue_handler.c
+│   ├── packet_parser.c
+│   ├── rule.c
+│   └── stats.c
+│
+├── scripts/                          # Helper scripts
+│   ├── flush_nfqueue.sh              # flushes the iptables rule chains
+│   ├── clean.sh                      # cleans the logs and rules
+│
+├── data/                           # Persistent runtime data
+│   └── rules.conf                  # Rule definitions (loaded at runtime)
+|
+├── Makefile                        # Project build script
+├── README.md                       # Project overview
+└── run_enforce.sh                  # Runs the enforcement mode
+|__ run_sim.sh                      # Runs only the simulation mode
+
 
 
 ---
@@ -31,7 +54,7 @@ firewall-project/
 - ✅ **NFQUEUE integration** for enforcement mode  
 - ✅ **libpcap-based passive mode**  
 - ✅ **CLI-based rule management** (add/delete/enable/disable/order)
-- ✅ **Persistent rule config via JSON**  
+- ✅ **Persistent rule config**  
 - ✅ **Basic traffic logging**
 
 ---
