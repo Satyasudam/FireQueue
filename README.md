@@ -9,9 +9,9 @@ Includes modular rule matching, NAT and redirection support, and a CLI interface
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 ``` bash
-📦 firewall-project/
+firewall-project/
 ├── include/                        # Header files
 │   ├── cli.h
 │   ├── fw_core.h
@@ -48,18 +48,18 @@ Includes modular rule matching, NAT and redirection support, and a CLI interface
 
 ---
 
-## ⚙️ Features
+##  Features
 
-- ✅ **IPv4 & IPv6 support**  
-- ✅ **NFQUEUE integration** for enforcement mode  
-- ✅ **libpcap-based passive mode**  
-- ✅ **CLI-based rule management** (add/delete/enable/disable/order)
-- ✅ **Persistent rule config**  
-- ✅ **Basic traffic logging**
+-  **IPv4 & IPv6 support**  
+-  **NFQUEUE integration** for enforcement mode  
+-  **libpcap-based passive mode**  
+-  **CLI-based rule management** (add/delete/enable/disable/order)
+-  **Persistent rule config**  
+-  **Basic traffic logging**
 
 ---
 
-## 📦 Dependencies
+##  Dependencies
 
 - `libpcap-dev`  
 - `libnetfilter-queue-dev`  
@@ -71,7 +71,7 @@ Install via:
 sudo apt install libpcap-dev libnetfilter-queue-dev iptables iproute2
 ```
 
-🚀 Usage
+ Usage
 Run in Enforcement Mode (NFQUEUE-based)
 ```bash
 sudo ./run_enforce.sh
@@ -86,7 +86,7 @@ sudo ./run_simulate.sh
 
 This passively monitors traffic and matches rules without enforcing any verdicts.
 
-🧰 Rule Management CLI
+ Rule Management CLI
 ```bash
 ===== FIREWALL MENU ====:
 1. Add rule
